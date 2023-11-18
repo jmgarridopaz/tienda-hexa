@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Tienda - Arquitectura Hexagonal</title>
+</head>
+<body>
+    <table border="1">
+		<caption>HA OCURRIDO UN ERROR</caption>
+        <tr>
+            <td colspan="2"><a th:href="@{/index}" role="button">Ir a la página de inicio</a></td>
+        </tr>
+        <tr>
+            <td>TimeStamp:</td>
+            <td><span th:text="${timestamp}"></span></td>
+        </tr>
+        <tr>
+            <td>Path:</td>
+            <td><span th:text="${path}"></span></td>
+        </tr>
+        <tr>
+            <td>Error:</td>
+            <td><span th:text="${error}"></span></td>
+        </tr>
+        <tr>
+            <td>Status:</td>
+            <td><span th:text="${status}"></span></td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td><span th:text="${message}"></span></td>
+        </tr>
+        <tr>
+            <td>Exception:</td>
+            <td><span th:text="${exception}"></span></td>
+        </tr>
+        <tr>
+            <td>Trace:</td>
+            <td><span th:text="${trace}"></span></td>
+        </tr>
+    </table>
+</body>
+</html>

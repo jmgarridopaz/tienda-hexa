@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Tienda - Arquitectura Hexagonal</title>
+</head>
+<body>
+	<table border="1">
+		<caption>Clientes</caption>
+		<thead>
+			<tr>
+			<th>Id</th>
+            <th>Email</th>
+            <th>Nombre</th>
+            </tr>
+        </thead>
+        <tfoot>
+			<tr>
+            <td colspan="3"><a th:href="@{/daraltacliente}" role="button">Dar de alta cliente</a></td>
+          </tr>
+        </tfoot>        
+        <tbody>
+			<tr th:each="cliente: ${clientes}">
+			<td th:text="${cliente.id}" />
+			<td th:text="${cliente.email}" />
+			<td th:text="${cliente.nombre}" />
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

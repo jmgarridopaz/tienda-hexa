@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Tienda - Arquitectura Hexagonal</title>
+</head>
+<body>
+	<form th:action="@{/daraltacliente}" th:object="${request}" method="post">
+	    <table border="1">
+			<caption>Nuevo cliente</caption>
+	        <tr>
+	            <td><label for="email">Email:</label></td>
+	            <td><input type="text" id="email" th:field="*{email}" /></td>
+	        </tr>
+	        <tr>
+	            <td><label for="nombre">Nombre:</label></td>
+	            <td><input type="text" id="nombre" th:field="*{nombre}" /></td>
+	        </tr>
+	        <tr>
+	            <td colspan="2"><button type="submit">Dar de alta cliente</button></td>
+	        </tr>
+	    </table>
+	</form>
+</body>
+</html>
